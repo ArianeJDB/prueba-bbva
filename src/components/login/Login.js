@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
-    return(
-        <div>
-            Login is working
-        </div>
+    return (
+        <Link to={`/counter`}> <div>login</div></Link>
+       
     )
 }
 
