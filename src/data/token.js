@@ -1,1 +1,0 @@
-export const token = '23456456j4m5bn243vbvbnv345'
