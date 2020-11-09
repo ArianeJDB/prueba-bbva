@@ -11,8 +11,8 @@ function App() {
       <Route path="/" exact render={() =>
         <Login />
       } />
-      <Route path="/counter" exact render={() =>
-        <Counter />
+      <Route path="/counter/:email" exact render={(params) =>
+        <Counter params={params} />
       } />
     </BrowserRouter>
   );
