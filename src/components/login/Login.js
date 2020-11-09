@@ -28,11 +28,14 @@ const Login = () => {
     }
 
     return (
+        <div className="login_container">
+        <i className="fa fa-lock"></i>
         <form onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="email" className="hidden">Email</label>
             <input
                 type="text"
                 name="email"
+                placeholder="Email"
                 ref={register({ required: true, pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/})}
             />
             {errors.email && <ErrorMessage errorMsg="El email es requerido" />}
@@ -40,6 +43,7 @@ const Login = () => {
             <input
                 type="password"
                 name="password"
+                placeholder="Password"
                 ref={register({ required: true, minLength: 6})}
             />
             {errors.password && errors.password.type === "required" && <ErrorMessage errorMsg="La contraseña es requerida" />
@@ -51,6 +55,7 @@ const Login = () => {
             }
             <button>Log in</button>
         </form>
+        </div>
     )
 }
 

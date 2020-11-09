@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 
+import './counter.css'
 
 const Counter = (props) => {
+    const history = useHistory();
+
     const [days, setDays] = useState(0)
     const [hours, setHours] = useState(0)
     const [minutes, setMinutes] = useState(0)
@@ -25,13 +29,20 @@ const Counter = (props) => {
             localStorage.setItem(email, Date.now())
         }
     }, [email])
-
+    const handleLogout = () => {
+        history.push("/")
+    }
     return (
-        <div>
-            <span>{days} days</span>
-            <span>{hours} hours</span>
-            <span>{minutes} minutes</span>
-            <span>{seconds} seconds</span>
+        <div className="counter_section">
+        <h1>Welcome!</h1>
+        <p>The last time you accessed was</p>
+        <div className="counter_container">
+            <div className="number">{days} <span>days</span></div>
+            <div className="number">{hours} <span>hours</span></div>
+            <div className="number">{minutes} <span>minutes</span></div>
+            <div className="number">{seconds} <span>seconds</span></div>
+        </div>
+        <button className="logout-btn" onClick={handleLogout}>LOGOUT</button>
         </div>
     )
 }
