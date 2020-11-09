@@ -1,65 +1,56 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import ErrorMessage from '../errorMessage/ErrorMessage'
 import { loginService } from '../../services/loginService'
-import Counter from '../counter/Counter'
 import './login.css';
-
 
 const Login = () => {
     const history = useHistory();
-    const [emailValue, setEmailValue] = useState('')
-    const [passwordValue, setPasswordValue] = useState('')
+    const { register, handleSubmit, errors } = useForm();
     const [loginError, setLoginError] = useState(false)
 
-
-    const handleEmailChange = (e) => {
-        setEmailValue(e.target.value)
-    }
-
-    const handlePasswordChange = (e) => {
-        setPasswordValue(e.target.value)
-    }
-
-    const handleLogin = (e) => {
-        e.preventDefault();
-
-        loginService(emailValue, passwordValue)
+    const onSubmit = ({email, password}) => {
+        loginService(email, password)
             .then(res => {
-                isStored(res)
+                storeEmail(res)
                 history.push("/counter/" + res);
             })
             .catch(err => {
                 setLoginError(true)
                 console.error(err)
             })
-
     }
-    const isStored = (email) => {
+    const storeEmail = (email) => {
         if (!localStorage.getItem(email)) {
             localStorage.setItem(email, Date.now())
         }
     }
+
     return (
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="email" className="hidden">Email</label>
             <input
                 type="text"
-                value={emailValue}
-                onChange={handleEmailChange}
+                name="email"
+                ref={register({ required: true, pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/})}
             />
+            {errors.email && <ErrorMessage errorMsg="El email es requerido" />}
             <label htmlFor="password" className="hidden">Contraseña</label>
             <input
                 type="password"
-                value={passwordValue}
-                onChange={handlePasswordChange}
+                name="password"
+                ref={register({ required: true, minLength: 6})}
             />
+            {errors.password && errors.password.type === "required" && <ErrorMessage errorMsg="La contraseña es requerida" />
+            }
+             {errors.password && errors.password.type === "minLength" && <ErrorMessage errorMsg="La contraseña debe tener mínimo 6 caracteres" />
+            }
             {
                 loginError && <ErrorMessage errorMsg='Verifica que las credenciales son correctas' />
             }
             <button>Log in</button>
         </form>
-
     )
 }
 

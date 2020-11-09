@@ -1,18 +1,18 @@
 [
     {
         "email": "maria@maria.com",
-        "password": "123456"
+        "password": "hola123456"
     },
     {
         "email": "lucas@lucas.com",
-        "password": "qwertyu"
+        "password": "hola123456"
     },
     {
         "email": "pepa@locas.com",
-        "password": "pig"
+        "password": "hola123456"
     },
     {
         "email": "jax@jax.com",
-        "password": "teller"
+        "password": "hola123456"
     }
 ]
