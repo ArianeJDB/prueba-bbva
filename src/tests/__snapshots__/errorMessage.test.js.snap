@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMessage component should render correctly 1`] = `
+<Fragment>
+  <div
+    className="error"
+  />
+</Fragment>
+`;
+
+exports[`ErrorMessage component should render correctly with errorMsg as prop 1`] = `
+<Fragment>
+  <div
+    className="error"
+  >
+    Email is required
+  </div>
+</Fragment>
+`;

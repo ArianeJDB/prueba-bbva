@@ -1,0 +1,39 @@
+.hidden {
+    display: none;
+}
+
+.login_container {
+    border: 1px solid lightgrey;
+    height: 350px;
+    padding: 80px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    align-items: center;
+    justify-content: center;
+}
+input {
+    margin-bottom: 30px;
+    border: 0 none;
+    border-bottom: 2px solid rgb(168, 166, 166);
+}
+
+button {
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    background-color: rgb(39, 39, 124);
+    color: white;
+    padding: 10px
+}
+
+.fa-lock {
+    font-size: 43px;
+    color: rgb(2, 76, 236);
+}

@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login component should should render ErrorMsg with errorMsg as a prop 1`] = `
+<Fragment>
+  <div
+    className="error"
+  >
+    Email is required
+  </div>
+</Fragment>
+`;
+
+exports[`Login component should should render correctly 1`] = `
+<div
+  className="login_container"
+>
+  <i
+    className="fa fa-lock"
+  />
+  <form
+    onSubmit={[Function]}
+  >
+    <label
+      className="hidden"
+      htmlFor="email"
+    >
+      Email
+    </label>
+    <input
+      name="email"
+      placeholder="Email"
+      type="text"
+    />
+    <label
+      className="hidden"
+      htmlFor="password"
+    >
+      Contraseña
+    </label>
+    <input
+      name="password"
+      placeholder="Password"
+      type="password"
+    />
+    <button>
+      Log in
+    </button>
+  </form>
+</div>
+`;

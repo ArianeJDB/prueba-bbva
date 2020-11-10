@@ -1,0 +1,36 @@
+.counter_container {
+    display: flex;
+    margin: 10px 0 50px 0;
+    color:  rgb(105, 104, 104);
+}
+.counter_section {
+    border: 1px solid lightgrey;
+    height: 350px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number {
+    font-size: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.number span {
+    font-size: 16px;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+.logout-btn {
+    width: auto;
+    padding: 10px 20px;
+    background-color: rgb(2, 76, 236);
+    
+}
