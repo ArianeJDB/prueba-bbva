@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter component should render 1`] = `
+<div
+  className="counter_section"
+>
+  <h1>
+    Welcome!
+  </h1>
+  <p>
+    The last time you accessed was
+  </p>
+  <div
+    className="counter_container"
+  >
+    <div
+      className="number"
+    >
+      0
+       
+      <span>
+        days
+      </span>
+    </div>
+    <div
+      className="number"
+    >
+      0
+       
+      <span>
+        hours
+      </span>
+    </div>
+    <div
+      className="number"
+    >
+      0
+       
+      <span>
+        minutes
+      </span>
+    </div>
+    <div
+      className="number"
+    >
+      0
+       
+      <span>
+        seconds
+      </span>
+    </div>
+  </div>
+  <button
+    className="logout-btn"
+    onClick={[Function]}
+  >
+    LOGOUT
+  </button>
+</div>
+`;

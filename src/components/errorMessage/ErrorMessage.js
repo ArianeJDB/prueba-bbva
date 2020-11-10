@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './errorMessage.css';
 
 const ErrorMessage = ({ errorMsg }) => {
     return (
         <>
-        <div>{errorMsg}</div>
+        <div className="error">{errorMsg}</div>
         </>
     )
 }
