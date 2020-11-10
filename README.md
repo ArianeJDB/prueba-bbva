@@ -1,4 +1,4 @@
-# Login simulado
+# Simulated login
 
 This is an app where you can login with different users and it shows the last time the user accessed.
 
@@ -28,7 +28,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
+### `npm lint`
 
 ### `npm run build`
 
