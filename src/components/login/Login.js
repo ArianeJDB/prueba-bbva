@@ -38,7 +38,7 @@ const Login = () => {
                 placeholder="Email"
                 ref={register({ required: true, pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/})}
             />
-            {errors.email && <ErrorMessage errorMsg="El email es requerido" />}
+            {errors.email && <ErrorMessage errorMsg="Email is required" />}
             <label htmlFor="password" className="hidden">Contraseña</label>
             <input
                 type="password"
@@ -46,12 +46,12 @@ const Login = () => {
                 placeholder="Password"
                 ref={register({ required: true, minLength: 6})}
             />
-            {errors.password && errors.password.type === "required" && <ErrorMessage errorMsg="La contraseña es requerida" />
+            {errors.password && errors.password.type === "required" && <ErrorMessage errorMsg="Password is required" />
             }
-             {errors.password && errors.password.type === "minLength" && <ErrorMessage errorMsg="La contraseña debe tener mínimo 6 caracteres" />
+             {errors.password && errors.password.type === "minLength" && <ErrorMessage errorMsg="Password must be 6 characters min length" />
             }
             {
-                loginError && <ErrorMessage errorMsg='Verifica que las credenciales son correctas' />
+                loginError && <ErrorMessage errorMsg='Check if the credentials are correct' />
             }
             <button>Log in</button>
         </form>

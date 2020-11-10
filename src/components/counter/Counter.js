@@ -12,6 +12,7 @@ const Counter = (props) => {
     const [seconds, setSeconds] = useState(0)
 
     const email = props.params.match.params.email
+
     useEffect(() => {
         const emailStored = localStorage.getItem(email)
         if (emailStored) {
