@@ -14,7 +14,7 @@ describe('ErrorMessage component with a div with error className', () => {
     test('should render correctly with errorMsg as prop', () => {
         const errorMsg = 'Email is required'
         wrapper = shallow(<ErrorMessage errorMsg={errorMsg} />);
-        
+
         expect(wrapper).toMatchSnapshot();
     })
 })

@@ -10,7 +10,6 @@ describe('service', () => {
         })
     })
 
-
     test('loginService should verify if user is registered by email and password', () => {
 
         const credentials = [{ email, password }]
@@ -18,12 +17,4 @@ describe('service', () => {
         loginService(email, password)
         expect(userLogged).toStrictEqual(credentials)
     })
-
 })
-
-// test('loginService with wrong credentials should reject and return Unauthorized error', (done) => {
-//     loginService('hola', '123').then(result => {
-//     expect(result).toBe('Unauthorized')
-//     done()
-//   })
-// })

@@ -3,9 +3,7 @@ import './errorMessage.css';
 
 const ErrorMessage = ({ errorMsg }) => {
     return (
-        <>
-        <div className="error">{errorMsg}</div>
-        </>
+            <div className="error">{errorMsg}</div>
     )
 }
 

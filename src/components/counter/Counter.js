@@ -26,7 +26,7 @@ const Counter = (props) => {
             setMinutes(minutes)
             const seconds = Math.floor(differenceInMiliseconds % 60);
             setSeconds(seconds)
-            
+
             localStorage.setItem(email, Date.now())
         }
     }, [email])
@@ -35,15 +35,15 @@ const Counter = (props) => {
     }
     return (
         <div className="counter_section">
-        <h1>Welcome!</h1>
-        <p>The last time you accessed was</p>
-        <div className="counter_container">
-            <div className="number">{days} <span>days</span></div>
-            <div className="number">{hours} <span>hours</span></div>
-            <div className="number">{minutes} <span>minutes</span></div>
-            <div className="number">{seconds} <span>seconds</span></div>
-        </div>
-        <button className="logout-btn" onClick={handleLogout}>LOGOUT</button>
+            <h1>Welcome!</h1>
+            <p>The last time you accessed was</p>
+            <div className="counter_container">
+                <div className="number">{days} <span>days</span></div>
+                <div className="number">{hours} <span>hours</span></div>
+                <div className="number">{minutes} <span>minutes</span></div>
+                <div className="number">{seconds} <span>seconds</span></div>
+            </div>
+            <button className="logout-btn" onClick={handleLogout}>LOGOUT</button>
         </div>
     )
 }
